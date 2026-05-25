@@ -93,16 +93,11 @@ Multi-camera intelligent surveillance architecture for institutional deployment.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
 
 **Robotics & Embedded**
 
 ![ROS2](https://img.shields.io/badge/ROS2-22314E?style=flat&logo=ros&logoColor=white)
 ![Jetson](https://img.shields.io/badge/NVIDIA_Jetson-76B900?style=flat&logo=nvidia&logoColor=white)
-![STM32](https://img.shields.io/badge/STM32-03234B?style=flat&logo=stmicroelectronics&logoColor=white)
-![ESP8266](https://img.shields.io/badge/ESP8266-E7352C?style=flat&logo=espressif&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat&logo=raspberrypi&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
 **Perception & ML**
@@ -156,21 +151,10 @@ Hardware doesn't forgive assumptions software can ignore.
 
 Check out the repos below — they reflect what I actually build.
 
-<!-- REPLACE: GitHub lets you pin up to 6 repos from your profile page.
-     Suggested pins (in order of priority):
-     1. quadruped / BARQ
-     2. depth-lama-inpainting-pipeline
-     3. ai-surveillance
-     4. Any embedded/STM32 projects
-     5. ROS2 work
-     6. ML coursework (if public)
--->
-
 | Repository | Description | Stack |
 |---|---|---|
 | [quadruped](https://github.com/aryasgit/quadruped) | 12-DOF legged robot: FSM gait, IMU stabilization, servo abstraction | Python · Jetson · I²C |
 | [depth-lama-inpainting](https://github.com/aryasgit/depth-lama-inpainting-pipeline) | Depth-aware inpainting pipeline for spatial scene reconstruction | PyTorch · OpenCV · CUDA |
-| [ai-surveillance](https://github.com/aryasgit/ai-surveillance) | Multi-camera detection and tracking system | YOLOv8 · ByteTrack · FastAPI |
 
 ---
 
@@ -190,29 +174,3 @@ Check out the repos below — they reflect what I actually build.
 </div>
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════════════
-SETUP CHECKLIST (delete this section before publishing):
-
- 1. Replace ALL instances of "aryasgit" with your GitHub username
- 2. Go to github.com/aryasgit and pin these 6 repos manually
- 3. Make sure your repos are public (or use count_private=true in stats)
- 4. For streak stats: works automatically once you push to public repos
- 5. Profile view counter auto-activates on first profile load
-
-RECOMMENDED ADDITIONAL TOOLS:
-- github-readme-activity-graph (contribution activity heatmap)
-  → github.com/Ashutosh00710/github-readme-activity-graph
-- Wakatime badge (coding time tracker, integrates with VS Code)
-  → wakatime.com
-- shields.io for any custom badges (shields.io)
-
-RECOMMENDED THEMES for stats cards:
-  github_dark / github_dark_dimmed / tokyonight / merko / gruvbox
-
-FUTURE IMPROVEMENTS:
-- Add a "Writing / Notes" section once you publish technical writeups
-- Add Wakatime weekly coding stats once you have enough history
-- Consider a custom header SVG (low-profile, just name + tagline)
-  → Use github.com/anuraghazra/github-readme-stats for advanced config
-═══════════════════════════════════════════════════════════════════ -->
