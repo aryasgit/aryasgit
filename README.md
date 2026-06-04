@@ -2,7 +2,7 @@
 
 # Aryaman Gupta
 
-**Electrical & Computer Engineering · Robotics · Embedded Systems · Perception**
+**Electrical & Computer Engineering · Robotics · Embedded Systems · Perception · Local-First Tooling**
 
 [![GitHub followers](https://img.shields.io/github/followers/aryasgit?style=flat&color=6e7681&labelColor=161b22&label=followers)](https://github.com/aryasgit)
 &nbsp;
@@ -18,6 +18,8 @@ ECE student at Shiv Nadar IoE building physical robotic systems — quadrupeds, 
 
 Not interested in toy demos. Focused on systems that work under physical and computational constraints — where hardware breaks, sensors drift, and latency budgets are real.
 
+When the off-the-shelf tools couldn't keep up with the shape of the work — code, hardware, parts, and long debugging threads at once — I built my own. **[Engram](https://github.com/aryasgit/engram)** is the result: four local-first, MIT-licensed developer tools that started as scaffolding for BARQ and generalized.
+
 ---
 
 ### What I Actually Do
@@ -27,6 +29,7 @@ Robotics          →  Quadruped locomotion, FSM-based gait control, servo abstr
 Perception        →  Depth estimation, segmentation, inpainting, edge inference on Jetson
 Embedded Systems  →  STM32, ESP8266/NodeMCU, serial protocols, sensor interfacing, hardware debug
 Systems Eng.      →  Architecture under constraint, hardware-software integration, deployment
+Developer Tools   →  Local-first memory (MCP), encrypted P2P sharing, build journaling, parts ledgers
 ```
 
 ---
@@ -37,10 +40,11 @@ Systems Eng.      →  Architecture under constraint, hardware-software integrat
 - **Perception pipeline** — Depth-Anything-V2 monocular depth + LaMa inpainting for spatial scene reconstruction
 - **Actuator systems** — Hybrid servo strategy: DS3240MG (high-torque joints) + Feetech STS3215 serial bus (feedback joints)
 - **Control architecture** — FSM locomotion, posture stabilization, layered hardware abstraction
+- **Engram** — A family of local-first developer tools, built to make BARQ and generalized to any hardware project
 
 ---
 
-### Featured Work
+### Featured Work — Robotics & Perception
 
 <details>
 <summary><strong>BARQ — Quadruped Robotics Platform</strong></summary>
@@ -87,12 +91,39 @@ Multi-camera intelligent surveillance architecture for institutional deployment.
 
 ---
 
+### Engram — Local-First Developer Tools
+
+Building BARQ broke every off-the-shelf tool — Notion was too slow, Slack cached everything forever, inventory software was built for warehouses. So I built the tooling the work actually needed. **[Engram](https://github.com/aryasgit/engram)** is four local-first, MIT-licensed tools, each owning one trace an engineering project leaves behind: what you *learned*, *said*, *did*, and *have*.
+
+| Tool | Keeps | Stack |
+|---|---|---|
+| [**Memcon**](https://github.com/aryasgit/memcon) | what you **learned** — persistent memory for Claude over MCP; auto-recall before answering, auto-capture after solving | Python · Qdrant · Ollama · Markdown |
+| [**Memshare**](https://github.com/aryasgit/memshare) | what you **said** — end-to-end encrypted P2P code & file sharing; the relay only ever sees ciphertext | JavaScript · WebCrypto · Fastify |
+| [**Thymeline**](https://github.com/aryasgit/thymeline) | what you **did** — an editorial build journal; thought to logged in one keystroke | FastAPI · SQLite · Markdown |
+| [**Invpart**](https://github.com/aryasgit/invpart) | what you **have** — a parts ledger where one status flag drives every total | FastAPI · SQLite · Markdown |
+
+```
+Local-first   →  Nothing leaves your machine. No SaaS, no telemetry, no accounts.
+Transparent   →  Your data is plain Markdown on disk — own it, edit it, walk away with it.
+MIT           →  Read the source. Fork it. Keep it. Each works standalone.
+```
+
+<details>
+<summary><strong>Why four tools instead of one dashboard</strong></summary>
+<br>
+
+Each solves one real friction from building hardware, and each runs standalone — you're never required to install more than the one that fixes your problem. They share a design language and a posture (local-first, Markdown as source of truth, engineer-shaped), not a database. Built as scaffolding for BARQ, generalized for any project shaped like it: code, hardware, parts, and the long threads between them.
+</details>
+
+---
+
 ### Tech Stack
 
 **Core Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 **Robotics & Embedded**
 
@@ -107,10 +138,12 @@ Multi-camera intelligent surveillance architecture for institutional deployment.
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat&logo=nvidia&logoColor=white)
 
-**Systems & Infra**
+**Systems, Infra & Local-First**
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat&logo=qdrant&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
@@ -123,6 +156,7 @@ Reliability over novelty.
 Architecture before implementation.
 Understand the constraint before optimizing around it.
 Hardware doesn't forgive assumptions software can ignore.
+When the tool doesn't exist, build it — local-first, you own the data.
 ```
 
 ---
@@ -155,6 +189,8 @@ Check out the repos below — they reflect what I actually build.
 |---|---|---|
 | [quadruped](https://github.com/aryasgit/quadruped) | 12-DOF legged robot: FSM gait, IMU stabilization, servo abstraction | Python · Jetson · I²C |
 | [depth-lama-inpainting](https://github.com/aryasgit/depth-lama-inpainting-pipeline) | Depth-aware inpainting pipeline for spatial scene reconstruction | PyTorch · OpenCV · CUDA |
+| [engram](https://github.com/aryasgit/engram) | Four local-first dev tools — memory, encrypted sharing, journaling, inventory | Python · JS · SQLite · MCP |
+| [memcon](https://github.com/aryasgit/memcon) | Local memory layer for Claude over MCP — auto-recall, auto-capture | Python · Qdrant · Ollama |
 
 ---
 
@@ -164,6 +200,7 @@ Check out the repos below — they reflect what I actually build.
 - Serial bus servo feedback loops (position/load telemetry)
 - Sensor fusion: IMU + depth for terrain-aware footstep planning
 - Edge inference optimization: TensorRT, quantization, latency profiling on Jetson
+- Collapsing Memcon's retrieval to a single embedded store (sqlite-vec + FTS5) — dropping Docker/Qdrant for a one-file, transparent index
 
 ---
 
